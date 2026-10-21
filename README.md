@@ -42,6 +42,7 @@ lcomoment_projection_order4.R
     computed by a leave-one-out identity with prefix sums.
 
 Example
+
   source("lcomoment_fast_exact_cov.R")
   set.seed(17)
   x <- rnorm(60); y <- 0.6 * x + rnorm(60)
@@ -55,6 +56,7 @@ Example
 Correctness check
 -----------------
 self_test_fast_cov.R
+
   Compares (1) the rank-prefix algorithm with direct enumeration of the
   disjoint-subset estimator for n = 6, 7, 8, (2) the leave-one-out
   projection estimator with the projection estimator formed from S1,
@@ -65,6 +67,7 @@ self_test_fast_cov.R
 Numerical experiments
 ---------------------
 benchmark_n20.R, benchmark_n30.R, benchmark_n50.R
+
   Computation time of the full 8 x 8 exactly unbiased covariance
   matrix: direct enumeration of the disjoint-subset estimator versus
   the rank-prefix algorithm, on the same bivariate Gaussian sample
@@ -73,6 +76,7 @@ benchmark_n20.R, benchmark_n30.R, benchmark_n50.R
   Output: lcomoment_n<N>_*.csv
 
 monte_carlo_lcomoment_cov.R
+
   Monte Carlo check of the exactly unbiased estimator for n = 20, 30,
   50 (bivariate Gaussian, rho = 0.6, 1000 samples, seed 20261018):
   average of the covariance estimates versus the empirical covariance
@@ -81,6 +85,7 @@ monte_carlo_lcomoment_cov.R
   Output: n<N>_*.csv, mc_summary_all.csv, mc_entrywise_all.csv
 
 additional_experiments.R
+
   Comparison of three covariance estimators (exactly unbiased, its PSD
   projection, and the projection estimator Omega_hat_n / n) with a
   high-precision Monte Carlo reference covariance, for three designs:
